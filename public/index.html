@@ -7,17 +7,19 @@
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../public/assets/css/profile.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </head>
 <body>
+
 	<div class="container">
 		<div class="jumbotron">
+
 			<h2><strong>Alumni Profile</strong></h2>
 			<p><em>Le Lorem Ipsum est simplement du faux texte employé dans la 
                 composition et la mise en page avant impression.</em></p>
@@ -95,19 +97,127 @@
 
               </div>
             </div>
-			
+
+      <!-- </jumbotron -->      
+    </div>
+    <!-- </container -->
+	</div>
+
+<!-- Experience container --> 
+			<div class="container">
+        <div class="card">
+          <div class="card-block">
+
+          <!-- Trigger (Add Work) modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#workModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+            <!-- ::Add (Work) Experience :: Modal -->
+            <div id="workModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Experience</h4>
+                </div>
+
+                <!-- Modal-Body :: Add Your Jobs Here! --> 
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+
+                      <!-- #jobTitle -->
+                      <label for="jobTitle" class="form-control-label">Title</label>
+                      <input type="text" class="form-control" id="jobTitle">
+                      
+                      <!-- #company -->
+                      <label for="company" class="form-control-label">Company</label>
+                      <input type="text" class="form-control" id="company">
+                      
+                      <!-- #location -->
+                      <label for="location" class="form-control-label">Location</label>
+                      <input type="text" class="form-control" id="location">
+
+                      <!-- start/end work period with dropbox (month + year) selection --> 
+                      <div class="row">
+                      <div class="col-sm-9">
+                      <p>Time Period</p>
+                        <div class="row">
+                            <div class="col-8 col-sm-6">
+                              <h5>From</h5>
+                              <!-- #startMonth -->
+                              <label for="startMonth">Month</label>
+                              <select class="form-control" id="startMonth">
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                              </select>
+
+                              <!-- #startYear -->
+                              <label for="startYear">Year</label>
+                              <select class="form-control" id="startYear">
+                                <option>1990</option>
+                                <option>1991</option>
+                                <option>1992</option>
+                                <option>1993</option>
+                              </select>
+                          </div>
+                         
+                          <div class="col-4 col-sm-6">
+                          <h5>To</h5>
+                            <!-- #endMonth -->
+                            <label for="endMonth">Month</label>
+                            <select class="form-control" id="endtMonth">
+                              <option>January</option>
+                              <option>February</option>
+                              <option>March</option>
+                              <option>April</option>
+                            </select>
+
+                            <!-- #endYear -->
+                            <label for="endYear">Year</label>
+                            <select class="form-control" id="endtYear">
+                              <option>1990</option>
+                              <option>1991</option>
+                              <option>1992</option>
+                              <option>1993</option>
+                            </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+                        <!-- #currentJob :: Rounded switch -->
+                        <div class="container"
+                        <div class="row">
+                          <div class="col-sm-9">  
+                            <label for="currentJob">I currently work here.</label>
+                            <label class="switch">
+                            <input type="checkbox" class="form-control" id="currentJob">
+                            <div class="slider round"></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                        
+  </div>
+</div>
+
 				<a href="#/child1" class="btn btn-info btn-lg">Show Child #1</a>
 				<a href="#/child2" class="btn btn-success btn-lg">Show Child #2</a>
 				<a href="#/child3" class="btn btn-warning btn-lg">Show Child #3</a>
 				<a href="#/store" class="btn btn-danger btn-lg">Store</a>
 			</p>
-		</div>
+	
 		
 
 		
 
 			
-		</div>
+	
 
     <!-- This is where React will load our HTML content --> 
     <div id="app"></div>
