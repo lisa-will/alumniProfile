@@ -7,7 +7,10 @@
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../public/assets/css/profile.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
@@ -26,27 +29,67 @@
             <div id="myModal" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Edit Intro</h4>
-                  </div>
+             <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Edit Intro</h4>
+                </div>
+                <!-- Modal-Body :: Bring on the edits! --> 
                   <div class="modal-body">
                     <form>
                       <div class="form-group">
-                        <!-- #firstName -->
-                        <label for="firstName" class="form-control-label">First Name:</label>
+
+                      <!-- #firstName -->
+                      <label for="firstName" class="form-control-label">First Name</label>
+                      <input type="text" class="form-control" id="firstName">
+                      
+                      <!-- #lastName -->
+                      <label for="lastName" class="form-control-label">Last Name</label>
+                      <input type="text" class="form-control" id="lastName">
+                      
+                      <!-- #headLine --> 
+                      <label for="headLine" class="form-control-label">Headline</label>
+                      <textarea class="form-control" id="headLine"></textarea>
+
+                      <!-- #currentPosition -->
+                      <label for="currentPosition" class="form-control-label">Current Position</label>
+                      <input type="text" class="form-control" id="currentPosition">
+
+                      <!-- #education -->
+                      <label for="education" class="form-control-label">Education</label>
+                      <input type="text" class="form-control" id="education">
+
+                      <!-- #country -->
+                      <label for="country" class="form-control-label">Country</label>
+                      <input type="text" class="form-control" id="country">
+
+                      <!-- #city -->
+                      <label for="city" class="form-control-label">City</label>
+                      <input type="text" class="form-control" id="city">
+
+                      <!-- #state -->
+                      <label for="state">State</label>
+                      <select class="form-control" id="state">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+
+                      <!-- #summary --> 
+                      <label for="summary" class="form-control-label">Summary</label>
+                      <textarea class="form-control" id="summary"></textarea>
+
                       </div>
-                      <div class="form-group">
-                        <!-- #lastName -->
-                        <label for="lastName" class="form-control-label">Last Name:</label>
-                      </div>
+
                     </form>
-                   
+
                   </div>
+
+                  <!-- Modal-Footer --> 
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
                   </div>
                 </div>
 
