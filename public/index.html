@@ -91,19 +91,17 @@
 
                   <!-- Modal-Footer --> 
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
                   </div>
                 </div>
 
               </div>
             </div>
+         
+    </div> <!-- /.jumbotron --> 
+	</div> <!-- /.container -->
 
-      <!-- </jumbotron -->      
-    </div>
-    <!-- </container -->
-	</div>
-
-<!-- Experience container --> 
+    <!-- Experience container --> 
 			<div class="container">
         <div class="card">
           <div class="card-block">
@@ -133,7 +131,10 @@
                       
                       <!-- #company -->
                       <label for="company" class="form-control-label">Company</label>
+                      <div class="input-group input-group-sm">
+                      <span class="input-group-addon"><i class="fa fa-building-o" aria-hidden="true"></i></span>
                       <input type="text" class="form-control" id="company">
+                      </div>
                       
                       <!-- #location -->
                       <label for="location" class="form-control-label">Location</label>
@@ -142,7 +143,8 @@
                       <!-- start/end work period with dropbox (month + year) selection --> 
                       <div class="row">
                       <div class="col-sm-9">
-                      <p>Time Period</p>
+                        
+                      <h6>Time Period</h6>
                         <div class="row">
                             <div class="col-8 col-sm-6">
                               <h5>From</h5>
@@ -169,7 +171,7 @@
                           <h5>To</h5>
                             <!-- #endMonth -->
                             <label for="endMonth">Month</label>
-                            <select class="form-control" id="endtMonth">
+                            <select class="form-control" id="endMonth">
                               <option>January</option>
                               <option>February</option>
                               <option>March</option>
@@ -178,33 +180,204 @@
 
                             <!-- #endYear -->
                             <label for="endYear">Year</label>
-                            <select class="form-control" id="endtYear">
+                            <select class="form-control" id="endYear">
                               <option>1990</option>
                               <option>1991</option>
                               <option>1992</option>
                               <option>1993</option>
                             </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-
-                        <!-- #currentJob :: Rounded switch -->
-                        <div class="container"
-                        <div class="row">
-                          <div class="col-sm-9">  
-                            <label for="currentJob">I currently work here.</label>
-                            <label class="switch">
-                            <input type="checkbox" class="form-control" id="currentJob">
-                            <div class="slider round"></div>
-                            </label>
-                          </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+            
+                  <!-- #currentJob :: checkbox -->
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <input type="checkbox" id="currentJob">
+                        <label for="currentJob">I currently work here</label> 
+                        <!-- </.col-lg-6 -->
+                        </div>
+                      <!-- </row -->
+                    </div>
+
+                  <br>
+
+                  <!-- #description --> 
+                  <label for="#description" class="form-control-label">Description</label>
+                    <textarea class="form-control" id="#description"></textarea>
+
+                      </div> <!-- /.form-group --> 
+
+                    </form>
+
+                  </div> <!-- modal-body --> 
+
+                  <!-- Modal-Footer --> 
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                  </div> <!-- /.modal-footer --> 
+                  
+                  </div> <!-- /.modal-content --> 
+              </div> <!-- /.modal-dialog --> 
+             </div> <!-- /.modal-fade --> 
+          </div> <!-- /.card-block --> 
+        </div> <!-- /.card --> 
+			</div> <!-- /.container --> 
+
+      <!-- Education container --> 
+			<div class="container">
+        <div class="card">
+          <div class="card-block">
+
+          <!-- Trigger (Add Education) modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#educationModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+            <!-- ::Add (Education) College :: Modal -->
+            <div id="educationModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Education</h4>
+                </div>
+
+                <!-- Modal-Body :: Add Your Jobs Here! --> 
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+
+                      <!-- #school -->
+                      <label for="school" class="form-control-label">School</label>
+                      <div class="input-group input-group-sm">
+                      <span class="input-group-addon"><i class="fa fa-institution" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" id="school">
+                      </div>
+
+                      <!-- #degree -->
+                      <label for="degree" class="form-control-label">Degree</label>
+                      <input type="text" class="form-control" id="degree">
+
+                      <!-- #fieldOfStudy -->
+                      <label for="#fieldOfStudy" class="form-control-label">Field of study</label>
+                      <input type="text" class="form-control" id="#fieldOfStudy">  
+
+                      <!-- #activitiesAndSocieties --> 
+                      <label for="#activitiesAndSocieties" class="form-control-label">Activities and Societies</label>
+                      <textarea class="form-control" id="#activitiesAndSocieties"></textarea>
+                      <h6>Ex: Alpha Phi Omega, Marching Band, Volleyball</h6>
+
+                      <!-- to/from year period with dropbox year selection --> 
+                      <div class="row">
+                      <div class="col-sm-9">
                         
-  </div>
-</div>
+                      <h6>Time Period</h6>
+                        <div class="row">
+                            <div class="col-4 col-sm-6">
+                              <!-- #fromYear -->
+                              <label for="fromYear">From Year</label>
+                              <select class="form-control" id="fromYear">
+                                <option>1990</option>
+                                <option>1991</option>
+                                <option>1992</option>
+                                <option>1993</option>
+                              </select>
+                          </div>
+                         
+                            <!-- #toYear -->
+                            <div class="col-4 col-sm-6">
+                            <label for="toYear">To Year</label>
+                            <select class="form-control" id="toYear">
+                              <option>1990</option>
+                              <option>1991</option>
+                              <option>1992</option>
+                              <option>1993</option>
+                            </select>
+                          </div> <!-- /.col-4 col-sm-9  --> 
+                        </div> <!-- /.row --> 
+                       </div> <!-- /.col-sm-9 --> 
+                     </div> <!-- /. row --> 
+
+                  </div> <!-- /. form-group -->  
+                </div> <!-- /.modal-body --> 
+             
+
+           <!-- Modal-Footer --> 
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                </div>
+
+               </div> <!-- /. modal-content --> 
+             </div> <!-- /.modal-dialog --> 
+            </div> <!-- /.modal-fade --> 
+          </div> <!-- /.card-block --> 
+        </div> <!-- /.card --> 
+			</div> <!-- /.container --> 
+      
+    <!-- Organizations container --> 
+			<div class="container">
+        <div class="card">
+          <div class="card-block">
+
+          <!-- Trigger (Add Organizations) modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#organizationsModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+            <!-- ::Add Organizations :: Modal -->
+            <div id="organizationsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Organizations</h4>
+                </div>
+
+                <!-- Modal-Body :: Add Organizations Here! --> 
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+
+                      <!-- #organization -->
+                      <label for="organization" class="form-control-label">Organization</label>
+                      <input type="text" class="form-control" id="organization">
+            
+                  <!-- #activeMember :: checkbox -->
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <input type="checkbox" id="currentJob">
+                        <label for="currentJob">Active Member</label> 
+                        <!-- </.col-lg-6 -->
+                        </div>
+                      <!-- </row -->
+                    </div>
+
+                  <br>
+
+                  <!-- #description --> 
+                  <label for="#description" class="form-control-label">Description</label>
+                    <textarea class="form-control" id="#description"></textarea>
+
+                    </div> <!-- /.form-group --> 
+
+                    </form>
+
+                  </div> <!-- modal-body --> 
+
+                  <!-- Modal-Footer --> 
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                  </div> <!-- /.modal-footer --> 
+                  
+                  </div> <!-- /.modal-content --> 
+              </div> <!-- /.modal-dialog --> 
+             </div> <!-- /.modal-fade --> 
+          </div> <!-- /.card-block --> 
+        </div> <!-- /.card --> 
+			</div> <!-- /.container --> 
+  
 
 				<a href="#/child1" class="btn btn-info btn-lg">Show Child #1</a>
 				<a href="#/child2" class="btn btn-success btn-lg">Show Child #2</a>
