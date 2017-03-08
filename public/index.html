@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="../img/Circle_Cap_Icon.png"/>
 	<title>Alumni Profile</title>
 
 	<!-- Latest compiled and minified CSS & JS -->
@@ -17,386 +18,402 @@
 </head>
 <body>
 
-	<div class="container">
-		<div class="jumbotron">
+<div class="container">
+  <div class="jumbotron" style="padding-right: 30px; padding-left: 30px;">
 
-			<h2><strong>Alumni Profile</strong></h2>
-			<p><em>Le Lorem Ipsum est simplement du faux texte employé dans la 
-                composition et la mise en page avant impression.</em></p>
+    <h2><strong>Alumni Profile</strong></h2>
+    <p style="text-align: center"><em>Le Lorem Ipsum est simplement du faux texte employé dans la 
+              composition et la mise en page avant impression.</em></p>
 
-          <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        <!-- Trigger the modal with a button -->
+          <button type="button" id="editIntroBtn"class="btn btn-info btn-circle " data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
 
-            <!-- ::Edit Intro:: Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-
-             <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Edit Intro</h4>
-                </div>
-                <!-- Modal-Body :: Bring on the edits! --> 
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-
-                      <!-- #firstName -->
-                      <label for="firstName" class="form-control-label">First Name</label>
-                      <input type="text" class="form-control" id="firstName">
-                      
-                      <!-- #lastName -->
-                      <label for="lastName" class="form-control-label">Last Name</label>
-                      <input type="text" class="form-control" id="lastName">
-                      
-                      <!-- #headLine --> 
-                      <label for="headLine" class="form-control-label">Headline</label>
-                      <textarea class="form-control" id="headLine"></textarea>
-
-                      <!-- #currentPosition -->
-                      <label for="currentPosition" class="form-control-label">Current Position</label>
-                      <input type="text" class="form-control" id="currentPosition">
-
-                      <!-- #education -->
-                      <label for="education" class="form-control-label">Education</label>
-                      <input type="text" class="form-control" id="education">
-
-                      <!-- #country -->
-                      <label for="country" class="form-control-label">Country</label>
-                      <input type="text" class="form-control" id="country">
-
-                      <!-- #city -->
-                      <label for="city" class="form-control-label">City</label>
-                      <input type="text" class="form-control" id="city">
-
-                      <!-- #state -->
-                      <label for="state">State</label>
-                      <select class="form-control" id="state">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-
-                      <!-- #summary --> 
-                      <label for="summary" class="form-control-label">Summary</label>
-                      <textarea class="form-control" id="summary"></textarea>
-
-                      </div>
-
-                    </form>
-
-                  </div>
-
-                  <!-- Modal-Footer --> 
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-         
-    </div> <!-- /.jumbotron --> 
-	</div> <!-- /.container -->
-
-    <!-- Experience container --> 
-			<div class="container">
-        <div class="card">
-          <div class="card-block">
-
-          <!-- Trigger (Add Work) modal with a button -->
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#workModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
-
-            <!-- ::Add (Work) Experience :: Modal -->
-            <div id="workModal" class="modal fade" role="dialog">
+          <!-- ::Edit Intro:: Modal -->
+          <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
-            <div class="modal-header">
+              <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Add Experience</h4>
+                <h4 class="modal-title">Edit Intro</h4>
+              </div>
+              <!-- Modal-Body :: Bring on the edits! --> 
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                    
+                    <!-- #profilePhoto --> 
+                    <div id="App"></div>
+
+                    <!-- #firstName -->
+                    <label for="firstName" class="form-control-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
+                    
+                    <!-- #lastName -->
+                    <label for="lastName" class="form-control-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                    
+                    <!-- #headLine --> 
+                    <label for="headLine" class="form-control-label">Headline</label>
+                    <textarea class="form-control" id="headLine"></textarea>
+
+                    <!-- #currentPosition -->
+                    <label for="currentPosition" class="form-control-label">Current Position</label>
+                    <input type="text" class="form-control" id="currentPosition">
+
+                    <!-- #education -->
+                    <label for="education" class="form-control-label">Education</label>
+                    <input type="text" class="form-control" id="education">
+
+                    <!-- #country -->
+                    <label for="country" class="form-control-label">Country</label>
+                    <input type="text" class="form-control" id="country">
+
+                    <!-- #city -->
+                    <label for="city" class="form-control-label">City</label>
+                    <input type="text" class="form-control" id="city">
+
+                    <!-- #state -->
+                    <label for="state">State</label>
+                    <select class="form-control" id="state">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+
+                    <!-- #summary --> 
+                    <label for="summary" class="form-control-label">Summary</label>
+                    <textarea class="form-control" id="summary"></textarea>
+
+                    </div>
+
+                  </form>
+
                 </div>
 
-                <!-- Modal-Body :: Add Your Jobs Here! --> 
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
+                <!-- Modal-Footer --> 
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                </div>
+              </div>
 
-                      <!-- #jobTitle -->
-                      <label for="jobTitle" class="form-control-label">Title</label>
-                      <input type="text" class="form-control" id="jobTitle">
-                      
-                      <!-- #company -->
-                      <label for="company" class="form-control-label">Company</label>
-                      <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-building-o" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" id="company">
-                      </div>
-                      
-                      <!-- #location -->
-                      <label for="location" class="form-control-label">Location</label>
-                      <input type="text" class="form-control" id="location">
+            </div>
+          </div>
+        
+  </div> <!-- /.jumbotron --> 
+</div> <!-- /.container -->
 
-                      <!-- start/end work period with dropbox (month + year) selection --> 
+
+  <!-- Experience container --> 
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+      <div class="card">
+        <div class="card-block">
+
+        <!-- Trigger (Add Work) modal with a button -->
+        <button type="button" id="addExperienceBtn" class="btn btn-info btn-circle " data-toggle="modal" data-target="#workModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+          <!-- ::Add (Work) Experience :: Modal -->
+          <div id="workModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Add Experience</h4>
+              </div>
+
+              <!-- Modal-Body :: Add Your Jobs Here! --> 
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+
+                    <!-- #jobTitle -->
+                    <label for="jobTitle" class="form-control-label">Title</label>
+                    <input type="text" class="form-control" id="jobTitle">
+                    
+                    <!-- #company -->
+                    <label for="company" class="form-control-label">Company</label>
+                    <div class="input-group input-group-sm">
+                    <span class="input-group-addon"><i class="fa fa-building-o" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" id="company">
+                    </div>
+                    
+                    <!-- #location -->
+                    <label for="location" class="form-control-label">Location</label>
+                    <input type="text" class="form-control" id="location">
+
+                    <!-- start/end work period with dropbox (month + year) selection --> 
+                    <div class="row">
+                    <div class="col-sm-9">
+                      
+                    <h6>Time Period</h6>
                       <div class="row">
-                      <div class="col-sm-9">
-                        
-                      <h6>Time Period</h6>
-                        <div class="row">
-                            <div class="col-8 col-sm-6">
-                              <h5>From</h5>
-                              <!-- #startMonth -->
-                              <label for="startMonth">Month</label>
-                              <select class="form-control" id="startMonth">
-                                <option>January</option>
-                                <option>February</option>
-                                <option>March</option>
-                                <option>April</option>
-                              </select>
-
-                              <!-- #startYear -->
-                              <label for="startYear">Year</label>
-                              <select class="form-control" id="startYear">
-                                <option>1990</option>
-                                <option>1991</option>
-                                <option>1992</option>
-                                <option>1993</option>
-                              </select>
-                          </div>
-                         
-                          <div class="col-4 col-sm-6">
-                          <h5>To</h5>
-                            <!-- #endMonth -->
-                            <label for="endMonth">Month</label>
-                            <select class="form-control" id="endMonth">
+                          <div class="col-8 col-sm-6">
+                            <h5>From</h5>
+                            <!-- #startMonth -->
+                            <label for="startMonth">Month</label>
+                            <select class="form-control" id="startMonth">
                               <option>January</option>
                               <option>February</option>
                               <option>March</option>
                               <option>April</option>
                             </select>
 
-                            <!-- #endYear -->
-                            <label for="endYear">Year</label>
-                            <select class="form-control" id="endYear">
+                            <!-- #startYear -->
+                            <label for="startYear">Year</label>
+                            <select class="form-control" id="startYear">
                               <option>1990</option>
                               <option>1991</option>
                               <option>1992</option>
                               <option>1993</option>
                             </select>
                         </div>
+                        
+                        <div class="col-4 col-sm-6">
+                        <h5>To</h5>
+                          <!-- #endMonth -->
+                          <label for="endMonth">Month</label>
+                          <select class="form-control" id="endMonth">
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                          </select>
+
+                          <!-- #endYear -->
+                          <label for="endYear">Year</label>
+                          <select class="form-control" id="endYear">
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1992</option>
+                            <option>1993</option>
+                          </select>
                       </div>
                     </div>
                   </div>
-            
-                  <!-- #currentJob :: checkbox -->
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <input type="checkbox" id="currentJob">
-                        <label for="currentJob">I currently work here</label> 
-                        <!-- </.col-lg-6 -->
-                        </div>
-                      <!-- </row -->
+                </div>
+          
+                <!-- #currentJob :: checkbox -->
+                <div class="row">
+                  <div class="col-lg-6">
+                    <input type="checkbox" id="currentJob">
+                      <label for="currentJob">I currently work here</label> 
+                      <!-- </.col-lg-6 -->
+                      </div>
+                    <!-- </row -->
+                  </div>
+
+                <br>
+
+                <!-- #description --> 
+                <label for="#description" class="form-control-label">Description</label>
+                  <textarea class="form-control" id="#description"></textarea>
+
+                    </div> <!-- /.form-group --> 
+
+                  </form>
+
+                </div> <!-- modal-body --> 
+
+                <!-- Modal-Footer --> 
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                </div> <!-- /.modal-footer --> 
+                
+                </div> <!-- /.modal-content --> 
+            </div> <!-- /.modal-dialog --> 
+            </div> <!-- /.modal-fade --> 
+          </div> <!-- /.card-block -->
+        </div> <!-- /.card --> 
+      </div> <!-- /.panel-body -->
+    </div> <!-- /.panel-default -->
+  </div> <!-- /.container --> 
+
+    <!-- Education container --> 
+    <div class="container">
+     <div class="panel panel-default">
+      <div class="panel-body">
+      <div class="card">
+        <div class="card-block">
+
+        <!-- Trigger (Add Education) modal with a button -->
+        <button type="button" id="addEducationBtn" class="btn btn-info btn-circle " data-toggle="modal" data-target="#educationModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+          <!-- ::Add (Education) College :: Modal -->
+          <div id="educationModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Add Education</h4>
+              </div>
+
+              <!-- Modal-Body :: Add Your Jobs Here! --> 
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+
+                    <!-- #school -->
+                    <label for="school" class="form-control-label">School</label>
+                    <div class="input-group input-group-sm">
+                    <span class="input-group-addon"><i class="fa fa-institution" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" id="school">
                     </div>
 
-                  <br>
+                    <!-- #degree -->
+                    <label for="degree" class="form-control-label">Degree</label>
+                    <input type="text" class="form-control" id="degree">
 
-                  <!-- #description --> 
-                  <label for="#description" class="form-control-label">Description</label>
-                    <textarea class="form-control" id="#description"></textarea>
+                    <!-- #fieldOfStudy -->
+                    <label for="#fieldOfStudy" class="form-control-label">Field of study</label>
+                    <input type="text" class="form-control" id="#fieldOfStudy">  
 
-                      </div> <!-- /.form-group --> 
+                    <!-- #activitiesAndSocieties --> 
+                    <label for="#activitiesAndSocieties" class="form-control-label">Activities and Societies</label>
+                    <textarea class="form-control" id="#activitiesAndSocieties"></textarea>
+                    <h6>Ex: Alpha Phi Omega, Marching Band, Volleyball</h6>
 
-                    </form>
-
-                  </div> <!-- modal-body --> 
-
-                  <!-- Modal-Footer --> 
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
-                  </div> <!-- /.modal-footer --> 
-                  
-                  </div> <!-- /.modal-content --> 
-              </div> <!-- /.modal-dialog --> 
-             </div> <!-- /.modal-fade --> 
-          </div> <!-- /.card-block --> 
-        </div> <!-- /.card --> 
-			</div> <!-- /.container --> 
-
-      <!-- Education container --> 
-			<div class="container">
-        <div class="card">
-          <div class="card-block">
-
-          <!-- Trigger (Add Education) modal with a button -->
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#educationModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
-
-            <!-- ::Add (Education) College :: Modal -->
-            <div id="educationModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Add Education</h4>
-                </div>
-
-                <!-- Modal-Body :: Add Your Jobs Here! --> 
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-
-                      <!-- #school -->
-                      <label for="school" class="form-control-label">School</label>
-                      <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-institution" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" id="school">
-                      </div>
-
-                      <!-- #degree -->
-                      <label for="degree" class="form-control-label">Degree</label>
-                      <input type="text" class="form-control" id="degree">
-
-                      <!-- #fieldOfStudy -->
-                      <label for="#fieldOfStudy" class="form-control-label">Field of study</label>
-                      <input type="text" class="form-control" id="#fieldOfStudy">  
-
-                      <!-- #activitiesAndSocieties --> 
-                      <label for="#activitiesAndSocieties" class="form-control-label">Activities and Societies</label>
-                      <textarea class="form-control" id="#activitiesAndSocieties"></textarea>
-                      <h6>Ex: Alpha Phi Omega, Marching Band, Volleyball</h6>
-
-                      <!-- to/from year period with dropbox year selection --> 
+                    <!-- to/from year period with dropbox year selection --> 
+                    <div class="row">
+                    <div class="col-sm-9">
+                      
+                    <h6>Time Period</h6>
                       <div class="row">
-                      <div class="col-sm-9">
-                        
-                      <h6>Time Period</h6>
-                        <div class="row">
-                            <div class="col-4 col-sm-6">
-                              <!-- #fromYear -->
-                              <label for="fromYear">From Year</label>
-                              <select class="form-control" id="fromYear">
-                                <option>1990</option>
-                                <option>1991</option>
-                                <option>1992</option>
-                                <option>1993</option>
-                              </select>
-                          </div>
-                         
-                            <!-- #toYear -->
-                            <div class="col-4 col-sm-6">
-                            <label for="toYear">To Year</label>
-                            <select class="form-control" id="toYear">
+                          <div class="col-4 col-sm-6">
+                            <!-- #fromYear -->
+                            <label for="fromYear">From Year</label>
+                            <select class="form-control" id="fromYear">
                               <option>1990</option>
                               <option>1991</option>
                               <option>1992</option>
                               <option>1993</option>
                             </select>
-                          </div> <!-- /.col-4 col-sm-9  --> 
-                        </div> <!-- /.row --> 
-                       </div> <!-- /.col-sm-9 --> 
-                     </div> <!-- /. row --> 
-
-                  </div> <!-- /. form-group -->  
-                </div> <!-- /.modal-body --> 
-             
-
-           <!-- Modal-Footer --> 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
-                </div>
-
-               </div> <!-- /. modal-content --> 
-             </div> <!-- /.modal-dialog --> 
-            </div> <!-- /.modal-fade --> 
-          </div> <!-- /.card-block --> 
-        </div> <!-- /.card --> 
-			</div> <!-- /.container --> 
-      
-    <!-- Organizations container --> 
-			<div class="container">
-        <div class="card">
-          <div class="card-block">
-
-          <!-- Trigger (Add Organizations) modal with a button -->
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#organizationsModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
-
-            <!-- ::Add Organizations :: Modal -->
-            <div id="organizationsModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Add Organizations</h4>
-                </div>
-
-                <!-- Modal-Body :: Add Organizations Here! --> 
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-
-                      <!-- #organization -->
-                      <label for="organization" class="form-control-label">Organization</label>
-                      <input type="text" class="form-control" id="organization">
-            
-                  <!-- #activeMember :: checkbox -->
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <input type="checkbox" id="currentJob">
-                        <label for="currentJob">Active Member</label> 
-                        <!-- </.col-lg-6 -->
                         </div>
-                      <!-- </row -->
-                    </div>
+                        
+                          <!-- #toYear -->
+                          <div class="col-4 col-sm-6">
+                          <label for="toYear">To Year</label>
+                          <select class="form-control" id="toYear">
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1992</option>
+                            <option>1993</option>
+                          </select>
+                        </div> <!-- /.col-4 col-sm-9  --> 
+                      </div> <!-- /.row --> 
+                      </div> <!-- /.col-sm-9 --> 
+                    </div> <!-- /. row --> 
 
-                  <br>
+                </div> <!-- /. form-group -->  
+              </div> <!-- /.modal-body --> 
+            
 
-                  <!-- #description --> 
-                  <label for="#description" class="form-control-label">Description</label>
-                    <textarea class="form-control" id="#description"></textarea>
+          <!-- Modal-Footer --> 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+              </div>
 
-                    </div> <!-- /.form-group --> 
+              </div> <!-- /. modal-content --> 
+            </div> <!-- /.modal-dialog --> 
+          </div> <!-- /.modal-fade --> 
+         </div> <!-- /.card-block --> 
+       </div> <!-- /.card --> 
+      </div> <!-- /.panel-body -->
+    </div> <!-- /.panel-default -->
+  </div> <!-- /.container --> 
+    
+  <!-- Organizations container --> 
+    <div class="container">
+      <div class="panel panel-default">
+      <div class="panel-body">
+      <div class="card">
+        <div class="card-block">
 
-                    </form>
+        <!-- Trigger (Add Organizations) modal with a button -->
+        <button type="button" id="addOrganizationBtn" class="btn btn-info btn-circle " data-toggle="modal" data-target="#organizationsModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
 
-                  </div> <!-- modal-body --> 
+          <!-- ::Add Organizations :: Modal -->
+          <div id="organizationsModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
 
-                  <!-- Modal-Footer --> 
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
-                  </div> <!-- /.modal-footer --> 
-                  
-                  </div> <!-- /.modal-content --> 
-              </div> <!-- /.modal-dialog --> 
-             </div> <!-- /.modal-fade --> 
-          </div> <!-- /.card-block --> 
-        </div> <!-- /.card --> 
-			</div> <!-- /.container --> 
+          <!-- Modal content-->
+          <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Add Organizations</h4>
+              </div>
+
+              <!-- Modal-Body :: Add Organizations Here! --> 
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+
+                    <!-- #organization -->
+                    <label for="organization" class="form-control-label">Organization</label>
+                    <input type="text" class="form-control" id="organization">
+          
+                <!-- #activeMember :: checkbox -->
+                <div class="row">
+                  <div class="col-lg-6">
+                    <input type="checkbox" id="currentJob">
+                      <label for="currentJob">Active Member</label> 
+                      <!-- </.col-lg-6 -->
+                      </div>
+                    <!-- </row -->
+                  </div>
+
+                <br>
+
+                <!-- #description --> 
+                <label for="#description" class="form-control-label">Description</label>
+                  <textarea class="form-control" id="#description"></textarea>
+
+                  </div> <!-- /.form-group --> 
+
+                  </form>
+
+                </div> <!-- modal-body --> 
+
+                <!-- Modal-Footer --> 
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                </div> <!-- /.modal-footer --> 
+                
+                </div> <!-- /.modal-content --> 
+            </div> <!-- /.modal-dialog --> 
+            </div> <!-- /.modal-fade --> 
+        </div> <!-- /.card-block --> 
+      </div> <!-- /.card --> 
+      </div> <!-- /.panel-body -->
+      </div> <!-- /.panel-default --> 
+    </div> <!-- /.container --> 
+
+
+      <a href="#/child1" class="btn btn-info btn-lg">Show Child #1</a>
+      <a href="#/child2" class="btn btn-success btn-lg">Show Child #2</a>
+      <a href="#/child3" class="btn btn-warning btn-lg">Show Child #3</a>
+      <a href="#/store" class="btn btn-danger btn-lg">Store</a>
+    </p>
+
   
 
-				<a href="#/child1" class="btn btn-info btn-lg">Show Child #1</a>
-				<a href="#/child2" class="btn btn-success btn-lg">Show Child #2</a>
-				<a href="#/child3" class="btn btn-warning btn-lg">Show Child #3</a>
-				<a href="#/store" class="btn btn-danger btn-lg">Store</a>
-			</p>
-	
-		
+  
 
-		
+    
 
-			
-	
 
-    <!-- This is where React will load our HTML content --> 
-    <div id="app"></div>
+  <!-- This is where React will load our HTML content --> 
+  <!--<div id="app"></div>-->
 
-    <!-- This is where all our JS is loaded --> 
-    <script src="bundle.js"></script>
+  <!-- This is where all our JS is loaded --> 
+  <script src="babel.js"></script>
 
 </body>
 </html>
