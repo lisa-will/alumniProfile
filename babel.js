@@ -53,4 +53,4 @@ class ImageUpload extends React.Component {
   }
 }
   
-ReactDOM.render(<ImageUpload/>, document.getElementById("App"));
+ReactDOM.render(<ImageUpload/>, document.getElementById("mainApp"));

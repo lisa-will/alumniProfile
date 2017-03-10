@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/x-icon" href="../img/Circle_Cap_Icon.png"/>
-	<title>Alumni Profile</title>
+  
+	<title>Alumni Profile</title> 
+  <link rel="shortcut icon" type="image/x-icon" href="./img/Cap_Circle_Icon.png"/>
+
 
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -21,9 +23,8 @@
 <div class="container">
   <div class="jumbotron" style="padding-right: 30px; padding-left: 30px;">
 
-    <h2><strong>Alumni Profile</strong></h2>
-    <p style="text-align: center"><em>Le Lorem Ipsum est simplement du faux texte employé dans la 
-              composition et la mise en page avant impression.</em></p>
+   <h2 style="text-align: center">Michelle Obama</h2>
+    <h3 style="text-align: center">First Lady | Harvard Law School 1988 </h3>
 
         <!-- Trigger the modal with a button -->
           <button type="button" id="editIntroBtn"class="btn btn-info btn-circle " data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
@@ -44,7 +45,7 @@
                     <div class="form-group">
                     
                     <!-- #profilePhoto --> 
-                    <div id="App"></div>
+                    <div id="mainApp"></div>
 
                     <!-- #firstName -->
                     <label for="firstName" class="form-control-label">First Name</label>
@@ -110,6 +111,7 @@
   <div class="container">
     <div class="panel panel-default">
       <div class="panel-body">
+        <h4 class="panel-title">Experience</h4>
       <div class="card">
         <div class="card-block">
 
@@ -238,6 +240,7 @@
     <div class="container">
      <div class="panel panel-default">
       <div class="panel-body">
+        <h4 class="panel-title">Education</h4>
       <div class="card">
         <div class="card-block">
 
@@ -269,7 +272,21 @@
 
                     <!-- #degree -->
                     <label for="degree" class="form-control-label">Degree</label>
-                    <input type="text" class="form-control" id="degree">
+                    <select class="form-control" id="degree">
+                             <option>A.A. (Associate of Arts)</option>
+                             <option>A.S. (Associate of Science)</option>
+                             <option>A.A.S. (Associate of Applied Science)</option>
+                             <option>A.E. (Associate of Engineering)</option>
+                             <option>A.A.A. (Associate of Applied Arts)</option>
+                            </select>
+
+                   
+                    <!-- #additionalDegree --> 
+                    <div class="row" id="addDegree">
+                    <button type="button" id="addDegreeBtn" class="btn btn-default btn-circle btn-add">
+                    <i class="fa fa-plus" aria-hidden="true"></i></button>Add more
+                    </div>
+                    <br>
 
                     <!-- #fieldOfStudy -->
                     <label for="#fieldOfStudy" class="form-control-label">Field of study</label>
@@ -333,6 +350,7 @@
     <div class="container">
       <div class="panel panel-default">
       <div class="panel-body">
+        <h4 class="panel-title">Organizations</h4>
       <div class="card">
         <div class="card-block">
 
@@ -362,8 +380,8 @@
                 <!-- #activeMember :: checkbox -->
                 <div class="row">
                   <div class="col-lg-6">
-                    <input type="checkbox" id="currentJob">
-                      <label for="currentJob">Active Member</label> 
+                    <input type="checkbox" id="activeMember">
+                      <label for="activeMember">Active Member</label> 
                       <!-- </.col-lg-6 -->
                       </div>
                     <!-- </row -->
@@ -372,8 +390,8 @@
                 <br>
 
                 <!-- #description --> 
-                <label for="#description" class="form-control-label">Description</label>
-                  <textarea class="form-control" id="#description"></textarea>
+                <label for="#organizationDescription" class="form-control-label">Description</label>
+                  <textarea class="form-control" id="#organizationDescription"></textarea>
 
                   </div> <!-- /.form-group --> 
 
@@ -396,6 +414,7 @@
     </div> <!-- /.container --> 
 
 
+
       <!--<a href="#/child1" class="btn btn-info btn-lg">Show Child #1</a>
       <a href="#/child2" class="btn btn-success btn-lg">Show Child #2</a>
       <a href="#/child3" class="btn btn-warning btn-lg">Show Child #3</a>
@@ -413,7 +432,9 @@
   <!--<div id="app"></div>-->
 
   <!-- This is where all our JS is loaded --> 
-  <script src="babel.js"></script>
+ <script src="../babel.js"></script>
+
+  <!--<script src="index.js"></script>-->
 
 </body>
 </html>
