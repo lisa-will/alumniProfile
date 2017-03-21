@@ -11,7 +11,7 @@ var ExperienceForm = React.createClass( {
     this.setState({ company: e.target.value });
   },
   handleJobLocationChange: function(e) {
-    this.setState({ location: e.target.value });
+    this.setState({ jobLocation: e.target.value });
   },
   handleStartMonthChange: function(e) {
     this.setState({ startMonth: e.target.value });
@@ -41,6 +41,7 @@ var ExperienceForm = React.createClass( {
     let jobDescription = this.state.jobDescription.trim();
         console.log(this.state);
     if (!jobTitle || !company ) {
+        alert("Enter a job title and a company please");
       return;
     }
     console.log("Here");
@@ -54,15 +55,14 @@ var ExperienceForm = React.createClass( {
                     <div className="modal-dialog">
                       {/* Modal content*/}
                       <div className="modal-content">
-                         <form method="POST" id="experienceForm" onSubmit = {this.handleSubmit} >
-                            <div className="form-group">
-                                <div className="modal-header">
-                              <button type="button" className="close" data-dismiss="modal">×</button>
-                            <h4 className="modal-title">Add Experience</h4>
+                        <div className="modal-header">
+                          <button type="button" className="close" data-dismiss="modal">×</button>
+                          <h4 className="modal-title">Add Experience</h4>
                         </div>
                         {/* Modal-Body :: Add Your Jobs Here! */} 
                         <div className="modal-body">
-                          
+                          <form method="POST" id="experienceForm" onSubmit = {this.handleSubmit}>
+                            <div className="form-group">
                               {/* #jobTitle */}
                               <label htmlFor="jobTitle" className="form-control-label">Title</label>
                               <input type="text" className="form-control" id="jobTitle" value= {this.state.jobTitle} onChange= {this.handleJobTitleChange} />
@@ -85,7 +85,7 @@ var ExperienceForm = React.createClass( {
                                       {/* #startMonth */}
                                       <label htmlFor="startMonth">Month</label>
                                       <select className="form-control" id="startMonth" value= {this.state.startMonth} onChange= {this.handleStartMonthChange}>
-                                        <option>Month</option>
+                                        <option>-</option>
                                         <option>January</option>
                                         <option>February</option>
                                         <option>March</option>
@@ -94,7 +94,7 @@ var ExperienceForm = React.createClass( {
                                       {/* #startYear */}
                                       <label htmlFor="startYear">Year</label>
                                       <select className="form-control" id="startYear" value= {this.state.startYear} onChange= {this.handleStartYearChange}>
-                                        <option>Year</option>
+                                        <option>-</option>
                                         <option>1990</option>
                                         <option>1991</option>
                                         <option>1992</option>
@@ -106,7 +106,7 @@ var ExperienceForm = React.createClass( {
                                       {/* #endMonth */}
                                       <label htmlFor="endMonth">Month</label>
                                       <select className="form-control" id="endMonth" value= {this.state.endMonth} onChange= {this.handleEndMonthChange}>
-                                        <option>Month</option>
+                                        <option>-</option>
                                         <option>January</option>
                                         <option>February</option>
                                         <option>March</option>
@@ -115,8 +115,8 @@ var ExperienceForm = React.createClass( {
                                       {/* #endYear */}
                                       <label htmlFor="endYear">Year</label>
                                       <select className="form-control" id="endYear" value= {this.state.endYear} onChange= {this.handleEndYearChange}>
-                                        <option>Year</option>
-                                        <option>1990</option>
+                                         <option>-</option>
+                                       <option>1990</option>
                                         <option>1991</option>
                                         <option>1992</option>
                                         <option>1993</option>
@@ -129,19 +129,17 @@ var ExperienceForm = React.createClass( {
                               <label htmlFor="#jobDescription" className="form-control-label">Description</label>
                               <textarea className="form-control" id="#jobDescription" value= {this.state.jobDescription} onChange= {this.handleJobDescriptionChange} />
                             </div> {/* /.form-group */} 
-                         
+                            <input role="button" className="btn btn-default" type = "submit" value = "Save" />
+                          </form>
                         </div> {/* modal-body */} 
                         {/* Modal-Footer */} 
                         <div className="modal-footer">
-                          <button type="button" className="btn btn-default" data-dismiss="modal">Save</button>
-                            </div> {/* /.form-group */} 
-                            
-                          </form>
+                          <button type="button" className="btn btn-default" data-dismiss="modal">Done</button>
                         </div> {/* /.modal-footer */} 
                       </div> {/* /.modal-content */} 
                     </div> {/* /.modal-dialog */} 
                   {/* /.modal-fade */}
-                </div>  
+                  </div>  
                 )
         }
 });

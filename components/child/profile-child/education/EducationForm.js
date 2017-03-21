@@ -1,3 +1,4 @@
+"use strict";
 var React = require('react');
 
 var EducationForm = React.createClass( {
@@ -33,6 +34,7 @@ var EducationForm = React.createClass( {
     let toYear = this.state.toYear.trim();
         console.log(this.state);
     if (!schoolName || !degree || !fieldOfStudy) {
+        alert("Enter a school name, a degree, and a field of study please");
       return;
     }
     console.log("Here");
@@ -50,15 +52,15 @@ var EducationForm = React.createClass( {
                           <button type="button" className="close" data-dismiss="modal">×</button>
                           <h4 className="modal-title">Add Education</h4>
                         </div>
+                <div className="modal-body">
+    <form method="POST" id="educationForm" onSubmit={this.handleSubmit}>
                         {/* Modal-Body :: Add Your Jobs Here! */} 
-                        <div className="modal-body">
-    <form method="POST" id="educationForm" action={this.handleSubmit}>
     <div className="form-group">
         {/* #school */}
         <label htmlFor="school" className="form-control-label">School</label>
         <div className="input-group input-group-sm">
         <span className="input-group-addon"><i className="fa fa-institution" aria-hidden="true" /></span>
-        <input type="text" className="form-control" id="schoolName" value= {this.state.schoolName} onChange= {this.handleSchoolNameChange} />
+        <input type="text" className="form-control" id="school" value= {this.state.schoolName} onChange= {this.handleSchoolNameChange} />
         </div>
         {/* #degree */}
         <label htmlFor="degree" className="form-control-label">Degree</label>
@@ -78,7 +80,7 @@ var EducationForm = React.createClass( {
         <br />
         {/* #fieldOfStudy */}
         <label htmlFor="#fieldOfStudy" className="form-control-label">Field of study</label>
-        <input type="text" className="form-control" id="#fieldOfStudy" value= {this.state.school} onChange= {this.handleSchoolChange} />  
+        <input type="text" className="form-control" id="#fieldOfStudy" value= {this.state.school} onChange= {this.handleFieldOfStudyChange} />  
         {/* #activitiesAndSocieties */} 
         <label htmlFor="#activitiesAndSocieties" className="form-control-label">Activities and Societies</label>
         <textarea className="form-control" id="#activitiesAndSocieties" value= {this.state.activities} onChange= {this.handleActivitiesChange} />
@@ -102,7 +104,7 @@ var EducationForm = React.createClass( {
             {/* #toYear */}
             <div className="col-4 col-sm-6">
                 <label htmlFor="toYear">To Year</label>
-                <select className="form-control" id="toYear" value= {this.state.ToYear} onChange= {this.handleToYearChange} >
+                <select className="form-control" id="toYear" value= {this.state.toYear} onChange= {this.handleToYearChange} >
                 <option>-</option>
                 <option>1990</option>
                 <option>1991</option>
@@ -114,10 +116,11 @@ var EducationForm = React.createClass( {
         </div> {/* /.col-sm-9 */} 
         </div> {/* /. row */} 
       </div> {/* /. form-group */}  
-    </form>
+              <input role="button" className="btn btn-default" type = "submit" value = "Save" />
+      </form>
  </div> {/* /.modal-body */} 
-<div className="modal-footer"> {/* Modal-Footer */} 
-<button type="submit" className="btn btn-default" data-dismiss="modal">Save</button>
+    <div className="modal-footer"> {/* Modal-Footer */} 
+<button type="button" className="btn btn-default" data-dismiss="modal">Done</button>
 </div>
 </div> {/* /. modal-content */} 
 </div> {/* /.modal-dialog */} 
@@ -129,5 +132,3 @@ var EducationForm = React.createClass( {
 });
 
 module.exports =  EducationForm;
-                         
-                          
